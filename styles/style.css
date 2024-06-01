@@ -1,0 +1,80 @@
+@import url(header.css);
+@import url(font.css);
+@import url(colors.css);
+@import url(footer.css);
+@import url(root.css);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-inline: var(--page-padding);
+    grid-gap: 40px;
+}
+
+.card {
+    padding: 5px;
+    background: var(--light-grey);
+}
+
+.card:hover {
+    background: white;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--dark-grey);
+    padding: 2rem;
+    border-radius: 5px;
+    background: white;
+    min-height: 350px;
+    height: 100%;
+}
+
+.post-title {
+    margin-block: 0.5rem 0;
+}
+
+.post-date {
+    color: var(--date-grey);
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.post-tag {
+    font-weight: bold;
+}
+
+.world-tag {
+    color: var(--light-blue);
+}
+
+.design-tag {
+    color: var(--light-green);
+}
+
+@media screen and (min-width: 901px) {
+    :root {
+        --page-padding: 5rem;
+        --footer-margin: 3rem;
+        --card-min-width: 600px;
+    }
+
+    .posts {
+        grid-template-columns: repeat(auto-fill, minmax(var(--card-min-width), 1fr));
+    }
+
+    .breaker {
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,56 @@
+@import url(header.css);
+@import url(footer.css);
+@import url(font.css);
+@import url(colors.css);
+@import url(root.css);
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    padding-inline: 0.5rem;
+}
+
+.image-and-figcaption {
+    margin-inline: auto;
+    text-align: center;
+}
+
+.image-size {
+    width: 80%;
+}
+
+.about {
+    background-color: lightgray;
+    padding: 15px;
+}
+
+.archive {
+    margin-bottom: 15px;
+}
+
+.social-sharing {
+    display: flex;
+    flex-direction: column;
+}
+
+.h3-line-height {
+    line-height: 0.5rem;
+}
+
+@media screen and (min-width: 901px) {
+    .container {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        padding: var(--page-padding);
+    }
+
+    aside {
+        float: right;
+    }
+
+    .breaker {
+        display: none;
+    }
+}
